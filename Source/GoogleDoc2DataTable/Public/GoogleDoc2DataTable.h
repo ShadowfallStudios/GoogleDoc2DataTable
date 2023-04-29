@@ -14,17 +14,13 @@ public:
 	virtual void ShutdownModule() override;
 
 private:
-	TWeakPtr<SWindow> MainWindow;
-	UDataTable* SelectedDataTable;
-	UGoogleDocsApi* GoogleDocsApi;
+	FSlowTask* SlowTask = nullptr;
+	UDataTable* SelectedDataTable = nullptr;
+	UGoogleDocsApi* GoogleDocsApi = nullptr;
 	FDelegateHandle CBAssetExtenderDelegateHandle;
-	FText LastDocId;
 
 	void ShowWindow();
 	void AddMenuEntry(FMenuBuilder& MenuBuilder);
-	void TextChanged(const FText& DocId);
-	void OnApiResponse(FString Response);
 
 	TSharedRef<FExtender> DataTableContextMenuExtender(const TArray<FAssetData>& AssetDataList);
-	FReply LoadGoogleDoc();
 };
