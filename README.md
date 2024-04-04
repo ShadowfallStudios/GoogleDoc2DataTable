@@ -1,7 +1,7 @@
 # Google Doc to Data Table UE5 plugin 
 
 # General information
-UE5 Editor plugin that provides a convinient way for importing data from google spreadsheet into UE5 data table.
+UE5 Editor plugin that provides a convinient way for importing data from google spreadsheet into UE5 data table. Forked from https://github.com/riperjack/ue4_googledoc2datatable
 
 ![Alt Text](Resources/demo.gif)
 
